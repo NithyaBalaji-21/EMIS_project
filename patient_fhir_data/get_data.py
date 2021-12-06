@@ -8,7 +8,7 @@ def get_data_from_git(collection_patient):
     r = requests.get(url)
     print("Response code -", r.status_code)
     html_doc = r.text
-    soup = BeautifulSoup(html_doc)
+    soup = BeautifulSoup(html_doc, features="html.parser")
     a_tags = soup.find_all('a')
     file_urls = ['https://github.com' + re.sub('/blob', '/raw', link.get('href'))
                  for link in a_tags  if '.json' in link.get('href')]
@@ -26,8 +26,8 @@ def upload_json_to_mongo(file_urls, collection_patient):
         response = requests.get(filename)
         data = response.json()
         collection_patient.insert_one(data)
-        print(filename, " uploaded successfully !")
 
+    print(" Documents uploaded successfully !")
     pass
 
 
