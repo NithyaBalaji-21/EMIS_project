@@ -9,11 +9,12 @@ Collected FHIR messages related to patients from the GitHub repository and store
 
 ### STEPS:
 1) Get all json file names from Github link https://github.com/emisgroup/exa-data-eng-assessment/ data directory.
-2) Uploaded all the json files to MongoDB using PyMongo driver. Deleted existing documents before uploading.
-3) Created multiple aggregation piplines to process multiple documents and return computed results.
-4) Transfomed the results into pandas dataframe for readability.
-5) Repeated steps 3 & 4 for multiple computational scenarios and the results are shown.
-6) Containerised the pipeline using docker / docker-compose.
+2) Python http requests are sent and response objects are returned as json format.
+3) Uploaded all the json objects to MongoDB as documents using PyMongo driver. Deleted existing documents before uploading.
+4) Created multiple aggregation piplines to process multiple documents and return computed results.
+5) Transfomed the results into pandas dataframe for readability.
+6) Repeated steps 3 & 4 for multiple computational scenarios and the results are shown.
+7) Containerised the pipeline using docker / docker-compose.
 
 
 
