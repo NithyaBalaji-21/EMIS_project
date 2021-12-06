@@ -1,10 +1,11 @@
 import requests
 import re
 from bs4 import BeautifulSoup
+import config
 
 
 def get_data_from_git(collection_patient):
-    url = "https://github.com/emisgroup/exa-data-eng-assessment/tree/main/data"
+    url = config.GIT_URL
     r = requests.get(url)
     print("Response code -", r.status_code)
     html_doc = r.text
