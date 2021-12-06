@@ -13,7 +13,7 @@ Collected FHIR messages related to patients from the GitHub repository and store
 3) Uploaded all the json objects to MongoDB as documents using PyMongo driver. Deleted existing documents before uploading.
 4) Created multiple aggregation piplines to process multiple documents and return computed results.
 5) Transfomed the results into pandas dataframe for readability.
-6) Repeated steps 3 & 4 for multiple computational scenarios and the results are shown.
+6) Repeated steps 4 & 5 for various scenarios and the results are shown.
 7) Containerised the pipeline using docker / docker-compose.
 
 
